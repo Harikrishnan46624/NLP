@@ -1,0 +1,145 @@
+NLP
+NLP is a field of computer science and AI that gives machines an ability to understand human langauge better an to assist in langauge related tasks
+
+APPLICATIONS
+Language Translation
+Dialog Systems / Chatbots
+Sentiment Analysis
+Text Summarizers
+Speech Recognition
+Autocorrect
+
+Disadvantages of NLP
+NLP may not show context.
+NLP is unpredictable
+NLP may require more keystrokes.
+NLP is unable to adapt to the new domain, and it has a limited function that's why NLP is built for a single and specific task only.
+
+Tokenization means splitting text into meaningful unit words. There are sentence tokenizers as known  tokens. These tokens can be as small as characters or as sentences
+
+Why do we need feature extraction?
+Feature Engineering is a very key part of Natural Language Processing.algorithms and machines can’t understand characters or words or sentences hence we need to encode these words into some specific form of numerical in order to interact with algorithms or machines
+
+Vectorization Methods:
+Vectorization is the process of converting text data into numerical vectors that machine learning models can understand. Various methods include Bag of Words, TF-IDF, and Word Embeddings.
+
+TF-IDF (Term Frequency-Inverse Document Frequency)
+TF-IDF, which stands for Term Frequency-Inverse Document Frequency, is a widely used statistical technique in natural language processing (NLP) and information retrieval (IR) to assess the importance of a word to a document in a corpus. It is used in a variety of applications, including search engines, text classification, and keyword extraction
+
+Term Frequency (TF)
+Term frequency (TF) measures how frequently a term (word or phrase) appears in a document
+TF = (number of times the term appears in the document) / (total number of words in the document)
+
+Inverse Document Frequency (IDF)
+Inverse document frequency (IDF) measures the rarity of a term across a corpus of documents
+IDF = log(total number of documents in the corpus) / (number of documents containing the term)
+
+TF-IDF Score
+The TF-IDF score is calculated by multiplying the TF and IDF values. The higher the TF-IDF score, the more important the term is considered to be in the context of that document compared to other words.
+TF-IDF = TF * IDF
+
+Advantages 
+Simple and easy to understand: TF-IDF is a relatively simple and easy-to-understand algorithm.
+Effective for many NLP tasks: TF-IDF has been shown to be effective for a variety of NLP tasks.
+Computationally efficient: TF-IDF is a computationally efficient algorithm
+
+Disadvantages 
+Sensitive to noisy data: TF-IDF can be sensitive to noisy data, such as misspelled words or irrelevant text.
+Ignores word order: TF-IDF does not take into account the order of words in a document.
+Does not consider semantic similarity: TF-IDF does not consider the semantic similarity of words.
+
+Bag of Words:
+Bag of words (BoW) is a simple and widely used technique for representing text documents in natural language processing (NLP). It is a method of converting text into a numerical representation It does this by creating a vector of word counts, where each element in the vector represents the number of times a particular word appears in the document.
+
+Applications
+Document Classification: Classifying documents into different categories based on their content.
+
+Text Clustering: Grouping similar documents together based on their shared vocabulary.
+
+Sentiment Analysis: Determining the sentiment of a text, such as positive, negative, or neutral.
+
+Topic Modeling: Identifying the main topics or themes in a collection of documents
+
+Advantages:
+Simplicity: The bag of words model is easy to implement and understand.
+Efficiency: It is computationally efficient to generate bag of words representations.
+Effectiveness: It can be effective for tasks that rely on word frequency, such as document classification
+
+Disadvantages:
+Ignores Word Order: The bag of words model disregards the order of words, which can be important for capturing the meaning of a sentence.
+Ignores Word Relationships: It does not consider the relationships between words, such as synonyms or antonyms.
+Sensitivity to Noise: It can be sensitive to common words or stop words that don't carry much meaning
+
+Word2Vec
+Word2Vec is a versatile technique in (NLP) that transforms words into numerical vectors. These vectors, also known as word embeddings, capture the semantic and syntactic relationships between words by placing them in a high-dimensional space. By converting words into vectors, Word2Vec enables computers to grasp the meaning and context of words in a more human-like manner.
+
+Advantages
+Captures word relationships
+Reduces dimensionality
+Improves NLP performance
+
+Disadvantages
+Data sensitivity
+Limited context
+Computational complexity
+
+CountVectorizer
+CountVectorizer is a text-to-matrix transformation method commonly used in natural language processing (NLP) to convert a collection of text documents into a matrix of token counts. This matrix representation is then used as input for various machine learning algorithms, such as text classification, sentiment analysis, and document clustering.
+
+Advantages
+Simple and efficient implementation.
+Interpretable results due to the use of word counts.
+Effective for capturing word frequency information.
+Suitable for handling large text corpora
+
+Disadvantages
+Ignores word order and syntactic relationships.
+Sensitive to the choice of stop words.
+May not capture semantic similarities between words.
+
+Parameters
+Stop Words
+Min_df
+Max_df
+Custom Preprocessing
+Limiting Vocabulary Size
+
+
+Corpus:
+In the realm of natural language processing (NLP), a corpus (plural: corpora) refers to a collection of text or speech data that serves as a valuable resource for training and developing NLP models. These corpora play a crucial role in enabling NLP models to perform various tasks, including:
+
+Types
+Monolingual Corpora: These corpora contain text or speech data in a single language.
+Multilingual Corpora: These corpora encompass text or speech data in multiple languages.
+Balanced Corpora: These corpora are designed to accurately represent the frequency distribution of words and phrases within a language
+
+STEMMING
+Stemming is the process of reducing words to their base or root form. It involves removing suffixes to obtain the root form of a word
+
+LEMMATIZATION	
+Lemmatization is converting words into their root word using vocabulary mapping. Lemmatization is done with the help of part of speech and its meaning; hence it doesn’t generate meaningless root words. But lemmatization is slower than stemming.
+
+
+Stop Words
+Stop words are a set of commonly used words in a language. Examples of stop words in English are “a,” “the,” “is,” “are,” etc. Stop words are commonly used in Text Mining and Natural Language Processing (NLP) to eliminate words that are so widely used that they carry very little useful information
+
+Named Entity Recognition (NER)
+NER is a fundamental task in natural language processing (NLP) that involves identifying and classifying named entities within unstructured text. These entities can include people, organizations, locations, dates, and other relevant information. NER plays a crucial role in extracting valuable insights from text data and enabling a wide range of NLP applications.
+
+N-grams
+N-grams are contiguous sequences of n items from a given sample of text or speech. The items can be letters, words, or base pairs according to the application. N-grams are typically collected from a text or speech corpus (a long text dataset).
+
+Types of n-grams:
+Unigrams: Sequences of single words or items (n=1)
+Bigrams: Sequences of two consecutive words or items (n=2)
+Trigrams: Sequences of three consecutive words or items (n=3)
+N-grams: Sequences of n consecutive words or items (n>3)
+
+Advantages 
+Easy to understand and implement
+Computationally efficient
+Effective for a wide range of NLP tasks
+
+Disadvantages
+Sparsity: Large n-gram models can be very sparse, meaning that many n-grams may not appear in the training corpus. This can lead to overfitting.
+Data dependency: N-gram models are highly dependent on the quality and quantity of the training data.
