@@ -1,0 +1,43 @@
+Corpus:(Paragraph of words)
+A corpus is a collection of authentic and organized text or speech data, often used as a basics for linguistic research, language modeling, and training machine learning models in NLP.
+
+Types of Corpora:
+Text Corpora: Collections of written texts.
+Speech Corpora: Collections of spoken language.
+Balanced Corpora: Represent a variety of genres and topics.
+Specialized Corpora: Focused on specific domains or subjects
+
+STEMMING
+Stemming is the process of reducing words to their base or root form. It involves removing suffixes to obtain the root form of a word
+
+LEMMATIZATION	
+Lemmatization is converting words into their root word using vocabulary mapping. Lemmatization is done with the help of part of speech and its meaning; hence it doesn’t generate meaningless root words. But lemmatization is slower than stemming.
+
+Named Entity Recognition (NER)
+NER   involves identifying and classifying named entities within unstructured text. These entities can include people, organizations, locations, dates, and other relevant information. NER plays a crucial role in extracting valuable insights from text data and enabling a wide range of NLP applications.
+
+N-grams
+N-grams are contiguous sequences of n items from a given sample of text or speech. The items can be letters, words, or base pairs according to the application. N-grams are typically collected from a text or speech corpus (a long text dataset.
+
+Types of n-grams:
+Unigrams: Sequences of single words or items (n=1)
+Bigrams: Sequences of two consecutive words or items (n=2)
+Trigrams: Sequences of three consecutive words or items (n=3)
+N-grams: Sequences of n consecutive words or items (n>3)
+
+Advantages 
+Easy to understand and implement
+Computationally efficient
+Effective for a wide range of NLP tasks
+
+Disadvantages
+Sparsity: Large n-gram models can be very sparse, meaning that many n-grams may not appear in the training corpus. This can lead to overfitting.
+Data dependency: N-gram models are highly dependent on the quality and quantity of the training data.
+
+ 
+Stop Words
+Stop words are a set of commonly used words in a language. Examples of stop words in English are “a,” “the,” “is,” “are,” etc. Stop words are commonly used in Text Mining and Natural Language Processing (NLP) to eliminate words that are so widely used that they carry very little useful information
+
+POS
+Parts of speech are categories of words that indicate how they function grammatically in a sentence. 
+Nouns, Pronouns, Adjectives, Verbs, Adverbs, Prepositions, Conjunctions, Interjections

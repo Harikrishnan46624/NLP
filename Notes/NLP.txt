@@ -1,33 +1,49 @@
 NLP
-NLP is a field of computer science and AI that gives machines an ability to understand human langauge better an to assist in langauge related tasks
+Natural Language Processing (NLP) is a field of artificial intelligence that deals with the interaction between computers and human language. It focuses on enabling computers to understand, interpret, and manipulate human language in a meaningful way
+
 
 APPLICATIONS
-Language Translation
-Dialog Systems / Chatbots
-Sentiment Analysis
-Text Summarizers
-Speech Recognition
-Autocorrect
+Machine translation: Automatically translating text from one language to another.
+Chatbots: Conversational AI agents that can interact with humans in a natural way.
+Text summarization: Automatically generating summaries of text documents.
+Sentiment analysis: Identifying the emotional tone of text data.
+Information extraction: Extracting structured information from text documents.
+Speech recognition: Converting spoken language into text.
+Text generation: Generating text, such as product descriptions or marketing copy.
 
 Disadvantages of NLP
-NLP may not show context.
-NLP is unpredictable
-NLP may require more keystrokes.
-NLP is unable to adapt to the new domain, and it has a limited function that's why NLP is built for a single and specific task only.
+Complexity and Data Requirements
+Domain Specificity and Bias
+Limited Common Sense and Explainability
+Error Proneness and Computational Cost
+Cultural and Linguistic Diversity
 
-Tokenization means splitting text into meaningful unit words. There are sentence tokenizers as known  tokens. These tokens can be as small as characters or as sentences
+Challenges
+Ambiguity: Words and phrases can have multiple meanings.
+Context Understanding: Understanding context and nuances in language.
+Data Sparsity: Limited availability of labeled data for training.
+Language Evolution: Languages are dynamic and change over time.
+Computational Complexity: Processing and understanding language requires significant computational resources.
+Lack of Common Sense Reasoning: Understanding implicit meanings that humans inherently grasp
+
+Tokenization
+Tokenization means splitting text into meaningful unit words. There are sentence tokenizers as known tokens can be as small as characters or as sentences
+Word Tokenization
+Sentence Tokenization
+Subword Tokenization -  breaks down words into smaller units, such as morphemes or characters
+N-gram Tokenization - creating sequences of n consecutive tokens from the text
 
 Why do we need feature extraction?
-Feature Engineering is a very key part of Natural Language Processing.algorithms and machines can’t understand characters or words or sentences hence we need to encode these words into some specific form of numerical in order to interact with algorithms or machines
+Feature Engineering is a very key part of Natural Language Processing algorithms and machines can’t understand characters ,words or sentences hence we need to encode these words into some specific form of numerical in order to interact with algorithms or machines (vectorization, BOW, TF-IDF, n_grams)
 
 Vectorization Methods:
 Vectorization is the process of converting text data into numerical vectors that machine learning models can understand. Various methods include Bag of Words, TF-IDF, and Word Embeddings.
 
 TF-IDF (Term Frequency-Inverse Document Frequency)
-TF-IDF, which stands for Term Frequency-Inverse Document Frequency, is a widely used statistical technique in natural language processing (NLP) and information retrieval (IR) to assess the importance of a word to a document in a corpus. It is used in a variety of applications, including search engines, text classification, and keyword extraction
+TF-IDF, which stands for Term Frequency-Inverse Document Frequency, is a widely used statistical technique in natural language processing to assess the importance of a word to a document in a corpus. It is used in a variety of applications, including search engines, text classification, and keyword extraction
 
 Term Frequency (TF)
-Term frequency (TF) measures how frequently a term (word or phrase) appears in a document
+Term frequency (TF) measures how frequently a term word  appears in a document
 TF = (number of times the term appears in the document) / (total number of words in the document)
 
 Inverse Document Frequency (IDF)
@@ -37,6 +53,12 @@ IDF = log(total number of documents in the corpus) / (number of documents contai
 TF-IDF Score
 The TF-IDF score is calculated by multiplying the TF and IDF values. The higher the TF-IDF score, the more important the term is considered to be in the context of that document compared to other words.
 TF-IDF = TF * IDF
+
+Applications
+Search engines: TF-IDF is used to rank documents in search results based on their relevance to a query.
+Text classification: TF-IDF can be used to classify documents into different categories based on their content.
+Keyword extraction: TF-IDF can be used to identify the most important keywords in a document.
+Recommendation systems: TF-IDF can be used to recommend documents to users based on their past interests
 
 Advantages 
 Simple and easy to understand: TF-IDF is a relatively simple and easy-to-understand algorithm.
@@ -53,11 +75,8 @@ Bag of words (BoW) is a simple and widely used technique for representing text d
 
 Applications
 Document Classification: Classifying documents into different categories based on their content.
-
 Text Clustering: Grouping similar documents together based on their shared vocabulary.
-
 Sentiment Analysis: Determining the sentiment of a text, such as positive, negative, or neutral.
-
 Topic Modeling: Identifying the main topics or themes in a collection of documents
 
 Advantages:
@@ -73,6 +92,23 @@ Sensitivity to Noise: It can be sensitive to common words or stop words that don
 Word2Vec
 Word2Vec is a versatile technique in (NLP) that transforms words into numerical vectors. These vectors, also known as word embeddings, capture the semantic and syntactic relationships between words by placing them in a high-dimensional space. By converting words into vectors, Word2Vec enables computers to grasp the meaning and context of words in a more human-like manner.
 
+to calculate the distance between the vectors is 1 - cosine similarity
+
+Essential Concepts in Word2Vec:
+Vocabulary: The collection of all unique words in the training corpus.
+Window Size: The number of neighboring words considered as context for a target word.
+Word Embeddings: Vector representations of words, where words with similar meanings are positioned closer together in the vector space.
+
+Two Primary Word2Vec Architectures:
+Continuous Bag-of-Words (CBOW): Predictions of the target word  on the  context words.
+Skip-Gram: Predict  context words from target word
+
+Applications of Word2Vec:
+Sentiment Analysis: Understanding the sentiment or emotional tone of text.
+Topic Modeling: Identifying the main themes or topics in a collection of documents.
+Machine Translation: Translating text from one language to another.
+Text Classification: Categorizing text into predefined classes or labels
+
 Advantages
 Captures word relationships
 Reduces dimensionality
@@ -85,6 +121,13 @@ Computational complexity
 
 CountVectorizer
 CountVectorizer is a text-to-matrix transformation method commonly used in natural language processing (NLP) to convert a collection of text documents into a matrix of token counts. This matrix representation is then used as input for various machine learning algorithms, such as text classification, sentiment analysis, and document clustering.
+
+How does CountVectorizer work?
+Tokenization: Breaking down the text into individual words or tokens.
+Conversion to lowercase: Converting all tokens to lowercase to ensure consistency.
+Stop word removal: Removing common words that don't add much meaning, such as "the," "a," and "an."
+Vocabulary creation: Building a vocabulary of unique words from the entire corpus.
+Count matrix creation: Constructing a matrix where each row represents a document and each column represents a word in the vocabulary. The value in each cell is the frequency of the corresponding word in the corresponding document.
 
 Advantages
 Simple and efficient implementation.
@@ -103,43 +146,3 @@ Min_df
 Max_df
 Custom Preprocessing
 Limiting Vocabulary Size
-
-
-Corpus:
-In the realm of natural language processing (NLP), a corpus (plural: corpora) refers to a collection of text or speech data that serves as a valuable resource for training and developing NLP models. These corpora play a crucial role in enabling NLP models to perform various tasks, including:
-
-Types
-Monolingual Corpora: These corpora contain text or speech data in a single language.
-Multilingual Corpora: These corpora encompass text or speech data in multiple languages.
-Balanced Corpora: These corpora are designed to accurately represent the frequency distribution of words and phrases within a language
-
-STEMMING
-Stemming is the process of reducing words to their base or root form. It involves removing suffixes to obtain the root form of a word
-
-LEMMATIZATION	
-Lemmatization is converting words into their root word using vocabulary mapping. Lemmatization is done with the help of part of speech and its meaning; hence it doesn’t generate meaningless root words. But lemmatization is slower than stemming.
-
-
-Stop Words
-Stop words are a set of commonly used words in a language. Examples of stop words in English are “a,” “the,” “is,” “are,” etc. Stop words are commonly used in Text Mining and Natural Language Processing (NLP) to eliminate words that are so widely used that they carry very little useful information
-
-Named Entity Recognition (NER)
-NER is a fundamental task in natural language processing (NLP) that involves identifying and classifying named entities within unstructured text. These entities can include people, organizations, locations, dates, and other relevant information. NER plays a crucial role in extracting valuable insights from text data and enabling a wide range of NLP applications.
-
-N-grams
-N-grams are contiguous sequences of n items from a given sample of text or speech. The items can be letters, words, or base pairs according to the application. N-grams are typically collected from a text or speech corpus (a long text dataset).
-
-Types of n-grams:
-Unigrams: Sequences of single words or items (n=1)
-Bigrams: Sequences of two consecutive words or items (n=2)
-Trigrams: Sequences of three consecutive words or items (n=3)
-N-grams: Sequences of n consecutive words or items (n>3)
-
-Advantages 
-Easy to understand and implement
-Computationally efficient
-Effective for a wide range of NLP tasks
-
-Disadvantages
-Sparsity: Large n-gram models can be very sparse, meaning that many n-grams may not appear in the training corpus. This can lead to overfitting.
-Data dependency: N-gram models are highly dependent on the quality and quantity of the training data.
